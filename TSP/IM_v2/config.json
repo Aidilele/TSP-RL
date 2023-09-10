@@ -1,0 +1,34 @@
+{
+  "TrainParas": {
+    "max_episodes": 200000,
+    "ep_max_step": 100,
+    "random_seed": 0,
+    "dataset": "100",
+    "alpha": 0.0001,
+    "gamma": 0.99,
+    "tau": 0.005,
+    "epsilon": 0.5,
+    "eps_end": 0.0,
+    "eps_dec": 1e-3,
+    "max_size": 10000,
+    "batch_size": 1024,
+    "reward_type": 3,
+    "render": false,
+    "reset_mode": "BottomLevel",
+    "save_info": "opefea_no_rnn_20"
+  },
+  "LoadModelParas": {
+    "ope_dim": 2,
+    "gat_hidden_dim": 4,
+    "gat_output_dim": 4,
+    "hidden_layer_num": 3,
+    "hidden_dim": 128,
+    "load_ep": 27500,
+    "load_info": "opefea_20",
+    "load_reward_type": 3,
+    "load_seed": 0
+  }
+}
+
+
+
