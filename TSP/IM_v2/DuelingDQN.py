@@ -76,8 +76,8 @@ class DuelingNetWork(nn.Module):
         dynamic_gat = self.dynamic_gat(node_fea, dynamic_adj)
         node_gat = torch.cat([static_gat, dynamic_gat, node_fea], dim=-1)
 
-        state = node_gat.mean(dim=-2)
-        rnn_state, (hn, cn) = self.state_rnn(state.unsqueeze(0), (h.unsqueeze(0), c.unsqueeze(0)))
+        rnn_state = node_gat.mean(dim=-2)
+        rnn_state, (hn, cn) = self.state_rnn(rnn_state.unsqueeze(0), (h.unsqueeze(0), c.unsqueeze(0)))
         rnn_state = rnn_state.squeeze(0)
         hn = hn.squeeze(0)
         cn = cn.squeeze(0)

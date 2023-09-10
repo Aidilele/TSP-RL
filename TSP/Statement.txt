@@ -3,3 +3,4 @@ GMv2:state为最后一个被安排好的node的nodefea
 GMv3:state为v1v2的concat
 
 IMv2:使用了滑动窗口来improve一个完整的solution序列
+IMv3:使用了env中定义的奖励函数来训练RL网络

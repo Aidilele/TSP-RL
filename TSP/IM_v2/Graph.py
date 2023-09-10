@@ -59,6 +59,7 @@ class Graph:
         if self.finsh_node == self.size:
             return 0
         current_node = self.node_fea[self.finsh_node - 1]
+        # current_node = self.node_fea[:self.finsh_node].mean(0)
         rest_node = self.node_fea[self.finsh_node:]
         max_index = np.argmin(np.linalg.norm((current_node - rest_node), axis=1))
         action = max_index + self.finsh_node
